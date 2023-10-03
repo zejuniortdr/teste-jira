@@ -41,11 +41,11 @@ jobs:
       #   with:
       #     from: commits
 
-      - name: Find Issue Key
-        id: find
-        uses: atlassian/gajira-find-issue-key@v3
-        with:
-          string: Search is performed in this string. FIND-1 will be found
+      # - name: Find Issue Key
+      #   id: find
+      #   uses: atlassian/gajira-find-issue-key@v3
+      #   with:
+      #     string: Search is performed in this string. FIND-1 will be found
 
       - name: Find Issue Key
         uses: atlassian/gajira-find-issue-key@v3
