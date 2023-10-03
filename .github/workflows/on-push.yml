@@ -36,10 +36,10 @@ jobs:
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
 
-      # - name: Find Issue Key
-      #   uses: atlassian/gajira-find-issue-key@v3
-      #   with:
-      #     from: commits
+      - name: Find Issue Key
+        uses: atlassian/gajira-find-issue-key@v3
+        with:
+          from: branch
 
       # - name: Find Issue Key
       #   id: find
@@ -47,10 +47,10 @@ jobs:
       #   with:
       #     string: Search is performed in this string. FIND-1 will be found
 
-      - name: Find Issue Key
-        uses: atlassian/gajira-find-issue-key@v3
-        with:
-          string: ${{ github.event.ref }} will search in branch name
+      # - name: Find Issue Key
+      #   uses: atlassian/gajira-find-issue-key@v3
+      #   with:
+      #     string: ${{ github.event.ref }} will search in branch name
 
       - name: should skip if working, or else error out
         if: ${{ steps.find.outputs.issue == '' }}
