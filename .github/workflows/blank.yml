@@ -35,6 +35,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Jira Find issue key
         uses: atlassian/gajira-find-issue-key@v3
-        with:
-          string: ${{ github.event.pull_request.title }}
-          from: ""
