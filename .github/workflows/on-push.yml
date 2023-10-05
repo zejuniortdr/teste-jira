@@ -39,7 +39,7 @@ jobs:
       - name: Find Issue Key
         uses: atlassian/gajira-find-issue-key@v3
         with:
-          from: branch
+          string: ${{ github.head_ref }}
 
       # - name: Find Issue Key
       #   id: find
